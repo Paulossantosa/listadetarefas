@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Interativa</title>
+    <link rel="stylesheet" href="lista-estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <div class="header">
+            <div id="date-time-container">
+                <span id="date-display"></span>
+                <span id="time-display"></span>
+            </div>
+            <h1>Minhas Tarefas ✨</h1>
+            <p id="quote-display" class="quote"></p>
+        </div>
+
+        <form id="task-form">
+            <input type="text" id="task-input" placeholder="O que vamos fazer hoje?" autocomplete="off">
+            <button type="submit" title="Adicionar tarefa">+</button>
+        </form>
+
+        <ul id="task-list">
+        </ul>
+    </div>
+
+    <script src="lista-script.js"></script>
+</body>
+
+</html>
