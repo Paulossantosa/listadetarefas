@@ -1,4 +1,4 @@
-// Espera todo o conteúdo da página ser carregado para executar o script
+// Espera todo o conteúdo da página ser carregado e executar o script
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Seleção dos Elementos do HTML ---
