@@ -1,0 +1,166 @@
+/* --- CONFIGURAÇÕES GERAIS E DESIGN DA PÁGINA --- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 2rem;
+    margin: 0;
+}
+
+
+/* --- CONTAINER PRINCIPAL DA APLICAÇÃO --- */
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+.header h1 {
+    margin: 0.5rem 0;
+    font-weight: 700;
+}
+
+
+/* --- ESTILOS PARA DATA, HORA E FRASE --- */
+
+#date-time-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.quote {
+    font-style: italic;
+    opacity: 0.9;
+    min-height: 20px;
+}
+
+
+/* --- FORMULÁRIO DE ADICIONAR TAREFA --- */
+
+#task-form {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#task-input {
+    flex-grow: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#task-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#task-input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+#task-form button {
+    width: 50px;
+    height: 50px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#task-form button:hover {
+    background: #ff8e8e;
+    transform: scale(1.1);
+}
+
+
+/* --- LISTA DE TAREFAS --- */
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    word-break: break-word;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+#task-list li:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#task-list li.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.delete-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+    transform: scale(1.3);
+}
